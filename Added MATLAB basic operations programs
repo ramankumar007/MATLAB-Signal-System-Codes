@@ -1,0 +1,75 @@
+1. _basic_operations.m
+a = 10;
+b = 5;
+
+add = a + b
+sub = a - b
+mul = a * b
+div = a / b
+pow = a^b
+
+
+2. _unit_step_signal.m
+n = -10:10;
+x = (n >= 0);
+
+stem(n,x);
+title('Unit Step Signal');
+xlabel('n');
+ylabel('Amplitude');
+grid on;
+
+3. _unit_impulse_signal.m
+n = -10:10;
+x = (n == 0);
+
+stem(n,x);
+title('Unit Impulse Signal');
+xlabel('n');
+ylabel('Amplitude');
+grid on;
+
+
+4. _ramp_signal.m
+n = 0:10;
+x = n;
+
+stem(n,x);
+title('Ramp Signal');
+xlabel('n');
+ylabel('Amplitude');
+grid on;
+
+5. _sinusoidal_signal.m
+t = 0:0.01:1;
+x = sin(2*pi*5*t);
+
+plot(t,x);
+title('Sinusoidal Signal');
+xlabel('Time');
+ylabel('Amplitude');
+grid on;
+
+6. _exponential_signal.m
+n = 0:10;
+x = exp(0.2*n);
+
+stem(n,x);
+title('Exponential Signal');
+xlabel('n');
+ylabel('Amplitude');
+grid on;
+
+
+7. _signal_addition.m
+n = 0:10;
+x1 = sin(n);
+x2 = cos(n);
+
+y = x1 + x2;
+
+stem(n,y);
+title('Signal Addition');
+xlabel('n');
+ylabel('Amplitude');
+grid on;
